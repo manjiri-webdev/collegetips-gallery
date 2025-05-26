@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CollegeTips Photo Gallery</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/media.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top" data-aos="fade-down">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+        <img src="images/logo.jpeg" alt="CollegeTips Logo" width="36" height="36" class="me-2 img-fluid"
+          style="max-width:36px; height:auto;">
+        CollegeTips
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#join">Join Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="py-5 hero-section text-center">
+    <h1 class="display-4 fw-bold mb-2">CollegeTips Gallery</h1>
+    <p class="lead mb-0">Creative &bull; Fun &bull; Team Vibes</p>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-5 bg-light" id="about" data-aos="fade-up">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="images/about.webp" alt="About CollegeTips" class="img-fluid rounded-4 shadow w-100"
+            style="max-width:420px; height:auto;">
+        </div>
+        <div class="col-md-6">
+          <h2 class="fw-bold mb-3">About CollegeTips</h2>
+          <p class="lead">We are India's fastest growing-up aiming to make students' life Easy and Happening. So
+            far we've reached and influenced the lives of more than 25 lakh students from 4000+ colleges in 1200+
+            cities with the help of 200+ members working as a team.</p>
+          <ul class="list-unstyled mb-0">
+            <li><strong>Offices:</strong> Mumbai, Delhi, Pune, Indore, Bhopal</li>
+            <li><strong>Expanding to:</strong> Kolkata, Bangalore, Hyderabad, Chandigarh, Jaipur, Ahmedabad, Lucknow,
+              Goa, Dubai, Canada, Sydney & London</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-5 text-center" id="stats" data-aos="fade-up">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-6 col-md-3 mb-4">
+          <div class="display-4 fw-bold text-success" id="studentsCount">25L+</div>
+          <div class="h6">Students Reached</div>
+        </div>
+        <div class="col-6 col-md-3 mb-4">
+          <div class="display-4 fw-bold text-warning" id="collegesCount">4000+</div>
+          <div class="h6">Colleges</div>
+        </div>
+        <div class="col-6 col-md-3 mb-4">
+          <div class="display-4 fw-bold text-info" id="citiesCount">1200+</div>
+          <div class="h6">Cities</div>
+        </div>
+        <div class="col-6 col-md-3 mb-4">
+          <div class="display-4 fw-bold text-dark" id="teamCount">200+</div>
+          <div class="h6">Team Members</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter Buttons -->
+  <div class="container text-center my-4">
+    <!-- Hamburger menu button for small screens -->
+    <button class="btn btn-primary d-md-none mb-3" type="button" data-bs-toggle="collapse"
+      data-bs-target="#filterCollapse" aria-controls="filterCollapse" aria-expanded="false" aria-label="Toggle filters">
+      <span class="navbar-toggler-icon"></span> Filters
+    </button>
+
+    <!-- Collapsible filter buttons -->
+    <div class="collapse d-md-block" id="filterCollapse">
+      <div class="d-flex flex-column flex-md-row flex-wrap justify-content-center gap-2 mb-4" id="filters">
+        <button class="btn btn-primary active" data-filter="all">All</button>
+        <button class="btn btn-outline-primary" data-filter="team">Team Vibes</button>
+        <button class="btn btn-outline-primary" data-filter="work">Work Hard, Play Hard</button>
+        <button class="btn btn-outline-primary" data-filter="behind">Behind-the-Scenes</button>
+        <button class="btn btn-outline-primary" data-filter="campaigns">Creative Campaigns</button>
+        <button class="btn btn-outline-primary" data-filter="HQ">CollegeTips HQ</button>
+      </div>
+    </div>
+
+    <!-- Gallery -->
+    <div class="row" id="gallery">
+      <!-- Team Vibes -->
+      <div class="col-lg-4 col-md-6 mb-4 gallery-item" data-category="team" data-aos="fade-up">
+        <div class="gallery-img-wrapper position-relative shadow-sm rounded overflow-hidden"
+          data-description="Our team collaborating with energy and enthusiasm during a creative session.">
+          <img src="images/team1.webp" class="gallery-img img-fluid rounded" alt="Team Vibes 1">
+          <div class="gallery-overlay d-flex flex-column justify-content-center align-items-center">
+            <h5 class="mb-1">Team Collaboration</h5>
+            <span class="badge bg-info">Team Vibes</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4 gallery-item" data-category="team" data-aos="fade-up">
+        <div class="gallery-img-wrapper position-relative shadow-sm rounded overflow-hidden"
+          data-description="Celebrating team spirit and togetherness at CollegeTips.">
+          <img src="images/team2.webp" class="img-fluid rounded gallery-img" alt="Team Vibes 2">
+          <div class="gallery-overlay d-flex flex-column justify-content-center align-items-center">
+            <h5 class="mb-1">Team Spirit</h5>
+            <span class="badge bg-info">Team Vibes</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4 gallery-item" data-category="team" data-aos="fade-up">
+        <div class="gallery-img-wrapper position-relative shadow-sm rounded overflow-hidden"
+          data-description="A candid moment capturing the fun side of our team.">
+          <img src="images/team3.jpg" class="img-fluid rounded gallery-img" alt="Team Vibes 3">
+          <div class="gallery-overlay d-flex flex-column justify-content-center align-items-center">
+            <h5 class="mb-1">Candid Moment</h5>
+            <span class="badge bg-info">Team Vibes</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4 gallery-item" data-category="team" data-aos="fade-up">
+        <div class="gallery-img-wrapper position-relative shadow-sm rounded overflow-hidden"
+          data-description="Team members sharing ideas and working towards a common goal.">
+          <img src="images/team4.jpg" class="img-fluid rounded gallery-img" alt="Team Vibes 4">
+          <div class="gallery-overlay d-flex flex-column justify-content-center align-items-center">
+            <h5 class="mb-1">Sharing Ideas</h5>
+            <span class="badge bg-info">Team Vibes</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4 gallery-item" data-category="team" data-aos="fade-up">
+        <div class="gallery-img-wrapper position-relative shadow-sm rounded overflow-hidden"
+          data-description="A snapshot of our vibrant and diverse team.">
+          <img src="images/team5.jpg" class="img-fluid rounded gallery-img" alt="Team Vibes 5">
+          <div class="gallery-overlay d-flex flex-column justify-content-center align-items-center">
+            <h5 class="mb-1">Vibrant Team</h5>
+            <span class="badge bg-info">Team Vibes</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4 gallery-item" data-category="team" data-aos="fade-up">
+        <div class="gallery-img-wrapper position-relative shadow-sm rounded overflow-hidden"
+          data-description="Team bonding activities that strengthen our work culture.">
+          <img src="images/team6.webp" class="img-fluid rounded gallery-img" alt="Team Vibes 6">
+          <div class="gallery-overlay d-flex flex-column justify-content-center align-items-center">
+            <h5 class="mb-1">Team Bonding</h5>
+            <span class="badge bg-info">Team Vibes</span>
+          </div>
+        </div>
+      </div>
+      <!-- Work Hard, Play Hard -->
+      <div class="col-lg-4 col-md-6 mb-4 gallery-item" data-category="work" data-aos="fade-up">
+        <div class="gallery-img-wrapper position-relative shadow-sm rounded overflow-hidden"
+          data-description="Balancing work and play: our team enjoying a fun break.">
+          <img src="images/play.jpg" class="img-fluid rounded gallery-img" alt="Work Hard Play Hard">
+          <div class="gallery-overlay d-flex flex-column justify-content-center align-items-center">
+            <h5 class="mb-1">Play Time</h5>
+            <span class="badge bg-warning text-dark">Work Hard, Play Hard</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4 gallery-item" data-category="work" data-aos="fade-up">
+        <div class="gallery-img-wrapper position-relative shadow-sm rounded overflow-hidden"
+          data-description="Team members engaging in playful activities after a productive day.">
+          <img src="images/play2.webp" class="img-fluid rounded gallery-img" alt="Work Hard Play Hard">
+          <div class="gallery-overlay d-flex flex-column justify-content-center align-items-center">
+            <h5 class="mb-1">Engaging Activities</h5>
+            <span class="badge bg-warning text-dark">Work Hard, Play Hard</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4 gallery-item" data-category="work" data-aos="fade-up">
+        <div class="gallery-img-wrapper position-relative shadow-sm rounded overflow-hidden"
+          data-description="Work hard, play hard: celebrating achievements together.">
+          <img src="images/play3.jpg" class="img-fluid rounded gallery-img" alt="Work Hard Play Hard">
+          <div class="gallery-overlay d-flex flex-column justify-content-center align-items-center">
+            <h5 class="mb-1">Celebrating Success</h5>
+            <span class="badge bg-warning text-dark">Work Hard, Play Hard</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4 gallery-item" data-category="work" data-aos="fade-up">
+        <div class="gallery-img-wrapper position-relative shadow-sm rounded overflow-hidden"
+          data-description="Team enjoying a lively game night at the office.">
+          <img src="images/play4.webp" class="img-fluid rounded gallery-img" alt="Work Hard Play Hard">
+          <div class="gallery-overlay d-flex flex-column justify-content-center align-items-center">
+            <h5 class="mb-1">Game Night Fun</h5>
+            <span class="badge bg-warning text-dark">Work Hard, Play Hard</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4 gallery-item" data-category="work" data-aos="fade-up">
+        <div class="gallery-img-wrapper position-relative shadow-sm rounded overflow-hidden"
+          data-description="Focused and dedicated: our team at work.">
+          <img src="images/work1.jpg" class="img-fluid rounded gallery-img" alt="Work Hard Play Hard">
+          <div class="gallery-overlay d-flex flex-column justify-content-center align-items-center">
+            <h5 class="mb-1">Focused Work</h5>
+            <span class="badge bg-warning text-dark">Work Hard, Play Hard</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4 gallery-item" data-category="work" data-aos="fade-up">
+        <div class="gallery-img-wrapper position-relative shadow-sm rounded overflow-hidden"
+          data-description="Collaborative efforts leading to successful outcomes.">
+          <img src="images/work3.webp" class="img-fluid rounded gallery-img" alt="Work Hard Play Hard">
+          <div class="gallery-overlay d-flex flex-column justify-content-center align-items-center">
+            <h5 class="mb-1">Collaborative Effort</h5>
+            <span class="badge bg-warning text-dark">Work Hard, Play Hard</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4 gallery-item" data-category="work" data-aos="fade-up">
+        <div class="gallery-img-wrapper position-relative shadow-sm rounded overflow-hidden"
+          data-description="Team members brainstorming and executing new ideas.">
+          <img src="images/work2.webp" class="img-fluid rounded gallery-img" alt="Work Hard Play Hard">
+          <div class="gallery-overlay d-flex flex-column justify-content-center align-items-center">
+            <h5 class="mb-1">Brainstorming</h5>
+            <span class="badge bg-warning text-dark">Work Hard, Play Hard</span>
+          </div>
+        </div>
+      </div>
+      <!-- Behind-the-Scenes -->
+      <div class="col-lg-4 col-md-6 mb-4 gallery-item" data-category="behind" data-aos="fade-up" data-aos-delay="300">
+        <div class="gallery-img-wrapper position-relative shadow-sm rounded overflow-hidden"
+          data-description="A behind-the-scenes look at our creative process and teamwork.">
+          <img src="images/behind1.webp" class="img-fluid rounded gallery-img" alt="Behind the Scenes">
+          <div class="gallery-overlay d-flex flex-column justify-content-center align-items-center">
+            <h5 class="mb-1">Behind the Scenes</h5>
+            <span class="badge bg-secondary">Behind-the-Scenes</span>
+          </div>
+        </div>
+      </div>
+      <!-- Creative Campaigns -->
+      <div class="col-lg-4 col-md-6 mb-4 gallery-item" data-category="campaigns" data-aos="fade-up">
+        <div class="gallery-img-wrapper position-relative shadow-sm rounded overflow-hidden"
+          data-description="Creative campaign shoot: bringing innovative ideas to life.">
+          <img src="images/campagins1.jpg" class="img-fluid rounded gallery-img" alt="Creative Campaigns">
+          <div class="gallery-overlay d-flex flex-column justify-content-center align-items-center">
+            <h5 class="mb-1">Campaign Shoot 1</h5>
+            <span class="badge bg-success">Creative Campaigns</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4 gallery-item" data-category="campaigns" data-aos="fade-up">
+        <div class="gallery-img-wrapper position-relative shadow-sm rounded overflow-hidden"
+          data-description="Behind the scenes of a major CollegeTips campaign launch.">
+          <img src="images/campaigns2.jpeg" class="img-fluid rounded gallery-img" alt="Creative Campaigns">
+          <div class="gallery-overlay d-flex flex-column justify-content-center align-items-center">
+            <h5 class="mb-1">Campaign Shoot 2</h5>
+            <span class="badge bg-success">Creative Campaigns</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4 gallery-item" data-category="campaigns" data-aos="fade-up">
+        <div class="gallery-img-wrapper position-relative shadow-sm rounded overflow-hidden"
+          data-description="Our team working on the final touches for a creative project.">
+          <img src="images/campagins3.jpg" class="img-fluid rounded gallery-img" alt="Creative Campaigns">
+          <div class="gallery-overlay d-flex flex-column justify-content-center align-items-center">
+            <h5 class="mb-1">Campaign Shoot 3</h5>
+            <span class="badge bg-success">Creative Campaigns</span>
+          </div>
+        </div>
+      </div>
+      <!-- CollegeTips HQ -->
+      <div class="col-lg-4 col-md-6 mb-4 gallery-item" data-category="hq" data-aos="fade-up">
+        <div class="gallery-img-wrapper position-relative shadow-sm rounded overflow-hidden"
+          data-description="A glimpse into the dynamic workspace at CollegeTips HQ.">
+          <img src="images/hq1.jpg" class="img-fluid rounded gallery-img" alt="CollegeTips HQ">
+          <div class="gallery-overlay d-flex flex-column justify-content-center align-items-center">
+            <h5 class="mb-1">CollegeTips HQ 1</h5>
+            <span class="badge bg-dark text-light">CollegeTips HQ</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4 gallery-item" data-category="hq" data-aos="fade-up">
+        <div class="gallery-img-wrapper position-relative shadow-sm rounded overflow-hidden"
+          data-description="Modern and inspiring office environment at CollegeTips.">
+          <img src="images/hq2.jpg" class="img-fluid rounded gallery-img" alt="CollegeTips HQ">
+          <div class="gallery-overlay d-flex flex-column justify-content-center align-items-center">
+            <h5 class="mb-1">CollegeTips HQ 2</h5>
+            <span class="badge bg-dark text-light">CollegeTips HQ</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4 gallery-item" data-category="hq" data-aos="fade-up">
+        <div class="gallery-img-wrapper position-relative shadow-sm rounded overflow-hidden"
+          data-description="Where ideas are born: the heart of CollegeTips operations.">
+          <img src="images/hq3.webp" class="img-fluid rounded gallery-img" alt="CollegeTips HQ">
+          <div class="gallery-overlay d-flex flex-column justify-content-center align-items-center">
+            <h5 class="mb-1">CollegeTips HQ 3</h5>
+            <span class="badge bg-dark text-light">CollegeTips HQ</span>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div class="modal fade" id="lightboxModal" tabindex="-1" aria-labelledby="lightboxModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-light border-0 rounded-4 shadow-lg" style="background-color: #eafaf2;">
+        <div
+          class="modal-body p-0 d-flex flex-column flex-md-row align-items-center justify-content-center modal-flexbox">
+          <img src="" id="lightboxImg" class="img-fluid rounded-4 w-100 w-md-50 modal-img-slide" alt="Preview">
+          <div class="modal-caption-box glassmorphism-box ms-md-4 mt-3 mt-md-0 animate-caption" style="background-color: #fff;">
+            <h5 id="lightboxTitle" class="mb-2"></h5>
+            <span id="lightboxCategory" class="badge mb-2"></span>
+            <p class="modal-desc mb-0"></p>
+          </div>
+        </div>
+        <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"
+          aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Join Us / CTA Section -->
+  <section class="py-5 bg-success text-white text-center" id="join" data-aos="fade-up">
+    <div class="container">
+      <h2 class="fw-bold mb-3">Ready to Join Our Journey?</h2>
+      <p class="lead mb-4">Follow us on social media to stay updated with our latest adventures, tips, and
+        behind-the-scenes moments.</p>
+      <a href="https://instagram.com/collegetips.in" target="_blank"
+        class="btn btn-light btn-lg rounded-pill me-2 mb-2">
+        <i class="bi bi-instagram me-2"></i>Instagram
+      </a>
+      <a href="https://www.youtube.com/@CollegeTipsInternship" target="_blank" class="btn btn-outline-light btn-lg rounded-pill mb-2">
+        <i class="bi bi-youtube me-2"></i>YouTube
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light pt-5 pb-3" id="footer" data-aos="fade-up">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5 class="fw-bold">CollegeTips</h5>
+          <p>Empowering students and creating meaningful connections across India and beyond.</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h6 class="fw-bold">Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-light text-decoration-none">Home</a></li>
+            <li><a href="#gallery" class="text-light text-decoration-none">Gallery</a></li>
+            <li><a href="#about" class="text-light text-decoration-none">About</a></li>
+            <li><a href="#join" class="text-light text-decoration-none">Join Us</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h6 class="fw-bold">Connect</h6>
+          <a href="https://instagram.com/collegetips.in" target="_blank" class="text-light me-3"><i
+              class="bi bi-instagram"></i> Instagram</a><br>
+          <a href="#" class="text-light"><i class="bi bi-envelope"></i> Email</a>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <small>&copy; 2024 CollegeTips. All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+</body>
+
+</html>

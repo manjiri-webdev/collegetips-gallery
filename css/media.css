@@ -1,0 +1,157 @@
+/*filter buttons*/
+@media (max-width: 576px) {
+    #filters {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .modal-flexbox {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal-img-slide {
+        width: 350px;
+        max-width: 45vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-img {
+        height: 180px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .navbar-nav .nav-link {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    #about img {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto 1.5rem auto;
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    #stats .display-4 {
+        font-size: 1.3rem;
+    }
+
+    #stats .h6 {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 576px) {
+    #join .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+
+@media (max-width: 767.98px) {
+    footer .row>div {
+        text-align: center;
+    }
+
+    footer ul {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .gallery-img {
+        height: 120px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .modal-flexbox {
+        flex-direction: column;
+    }
+
+    .modal-img-slide {
+        width: 100%;
+        max-width: 100vw;
+        margin-bottom: 1.5rem;
+    }
+
+    .glassmorphism-box {
+        width: 100%;
+        max-width: 100vw;
+        min-width: unset;
+        align-items: center;
+        text-align: center;
+        padding: 1.25rem 1rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .modal-dialog.modal-dialog-centered {
+        max-width: 98vw;
+        width: 98vw;
+        min-width: unset;
+    }
+
+    .modal-content {
+        min-height: 60vh;
+        max-height: 98vh;
+        padding: 0.5rem;
+    }
+
+    .modal-flexbox {
+        flex-direction: column;
+        min-height: unset;
+        height: auto;
+        max-height: 90vh;
+        width: 100%;
+    }
+
+    .modal-img-slide {
+        width: 100%;
+        max-width: 100vw;
+        height: 220px;
+        max-height: 220px;
+        margin-bottom: 1.5rem;
+    }
+
+    .glassmorphism-box {
+        width: 100%;
+        max-width: 100vw;
+        min-width: unset;
+        min-height: unset;
+        max-height: 200px;
+        align-items: center;
+        text-align: center;
+        padding: 1.25rem 1rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    #about .row {
+        flex-direction: column-reverse;
+    }
+
+    #about img {
+        margin-bottom: 1.5rem;
+    }
+
+    #stats .display-4 {
+        font-size: 2rem;
+    }
+}
